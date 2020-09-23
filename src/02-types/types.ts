@@ -173,3 +173,33 @@ const product = {
 };
 
 product.productValidate();
+
+// strictNullChecks
+const height = 12;
+// height = null;
+
+let optionalHeight: null | number = 12;
+optionalHeight = null;
+
+console.log(height, optionalHeight);
+
+type IContact = {
+  name: string;
+  tel1: string;
+  tel2?: string;
+};
+
+const contact1: IContact = {
+  name: 'Filano',
+  tel1: '987654321',
+};
+
+console.log(contact1.name);
+console.log(contact1.tel1);
+console.log(contact1.tel2);
+
+let nullable = null; // any
+nullable = 12;
+nullable = 'abc';
+
+console.log(nullable);

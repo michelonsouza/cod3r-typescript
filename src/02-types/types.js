@@ -136,3 +136,20 @@ var product = {
     },
 };
 product.productValidate();
+// strictNullChecks
+var height = 12;
+// height = null;
+var optionalHeight = 12;
+optionalHeight = null;
+console.log(height, optionalHeight);
+var contact1 = {
+    name: 'Filano',
+    tel1: '987654321',
+};
+console.log(contact1.name);
+console.log(contact1.tel1);
+console.log(contact1.tel2);
+var nullable = null; // any
+nullable = 12;
+nullable = 'abc';
+console.log(nullable);
