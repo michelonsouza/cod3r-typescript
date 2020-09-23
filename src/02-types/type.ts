@@ -30,3 +30,9 @@ console.log(typeof hobbies);
 hobbies = [100, 200, 300];
 // hobbies = 100;
 console.log(hobbies);
+
+// tupla
+let address: [string, number, string] = ['AV Principal', 99, ''];
+console.log(address);
+address = ['Rua Importante', 1260, 'casa 1'];
+console.log(address);
