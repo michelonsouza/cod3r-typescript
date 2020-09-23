@@ -34,5 +34,23 @@ console.log(hobbies);
 // tupla
 let address: [string, number, string] = ['AV Principal', 99, ''];
 console.log(address);
+
 address = ['Rua Importante', 1260, 'casa 1'];
 console.log(address);
+
+// enums
+// eslint-disable-next-line no-shadow
+enum Color {
+  Gray, // 0
+  Green = 100,
+  Blue = 10,
+  Laranja,
+  Yellow,
+  Red = 100,
+}
+
+const myColor: Color = Color.Green;
+
+console.log(myColor);
+console.log(Color.Blue);
+console.log(Color.Laranja, Color.Red);

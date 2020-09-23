@@ -31,3 +31,18 @@ var address = ['AV Principal', 99, ''];
 console.log(address);
 address = ['Rua Importante', 1260, 'casa 1'];
 console.log(address);
+// enums
+// eslint-disable-next-line no-shadow
+var Color;
+(function (Color) {
+    Color[Color["Gray"] = 0] = "Gray";
+    Color[Color["Green"] = 100] = "Green";
+    Color[Color["Blue"] = 10] = "Blue";
+    Color[Color["Laranja"] = 11] = "Laranja";
+    Color[Color["Yellow"] = 12] = "Yellow";
+    Color[Color["Red"] = 100] = "Red";
+})(Color || (Color = {}));
+var myColor = Color.Green;
+console.log(myColor);
+console.log(Color.Blue);
+console.log(Color.Laranja, Color.Red);
