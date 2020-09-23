@@ -106,3 +106,8 @@ console.log(employee.names);
 console.log(employee.hitPoint(8));
 console.log(employee.hitPoint(9));
 console.log(employee2.names);
+// union types
+var nota = 10;
+console.log("Minha nota \u00E9 " + nota);
+nota = '100';
+console.log("Minha nota \u00E9 " + nota);

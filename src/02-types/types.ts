@@ -137,3 +137,9 @@ console.log(employee.hitPoint(8));
 console.log(employee.hitPoint(9));
 
 console.log(employee2.names);
+
+// union types
+let nota: number | string = 10;
+console.log(`Minha nota é ${nota}`);
+nota = '100';
+console.log(`Minha nota é ${nota}`);
