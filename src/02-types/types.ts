@@ -60,3 +60,35 @@ let car: any = 'BMW';
 console.log(car);
 car = { brand: 'BMW', year: 2019 };
 console.log(car);
+
+// functions
+function returnMyName(): string {
+  // return myAge;
+  // eslint-disable-next-line no-restricted-globals
+  return name;
+}
+
+console.log(returnMyName());
+
+function sayHello(): void {
+  console.log('Hello');
+}
+
+sayHello();
+
+function multiply(numA: number, numB: number): number {
+  return numA * numB;
+}
+
+// console.log(multiply(2, 'ana'));
+console.log(multiply(4, 9));
+
+// function type
+
+let calc: (a: number, b: number) => number;
+// calc = sayHello;
+// calc();
+
+// eslint-disable-next-line prefer-const
+calc = multiply;
+console.log(calc(5, 6));
