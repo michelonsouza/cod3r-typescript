@@ -21,3 +21,12 @@ let myAge: number;
 myAge = 27;
 console.log(typeof myAge);
 // myAge = 'idade 27';
+
+// array
+let hobbies: any[] = ['Cozinhar', 'Praticar esportes'];
+console.log(hobbies);
+console.log(typeof hobbies);
+
+hobbies = [100, 200, 300];
+// hobbies = 100;
+console.log(hobbies);
