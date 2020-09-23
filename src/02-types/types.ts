@@ -92,3 +92,48 @@ let calc: (a: number, b: number) => number;
 // eslint-disable-next-line prefer-const
 calc = multiply;
 console.log(calc(5, 6));
+
+// objects
+let user: { name: string; age: number } = {
+  name: 'Michelon',
+  age: 36,
+};
+
+console.log(user);
+// user = {};
+// user = {
+//   nome: 'maria',
+//   idade: 30.
+// }
+
+user = {
+  name: 'maria',
+  age: 31,
+};
+console.log(user);
+
+// chalenge
+type IEmployee = {
+  names: string[];
+  hitPoint(hour: number): string;
+};
+
+const employee: IEmployee = {
+  names: ['Lilian', 'Júlia', 'Rejane'],
+  hitPoint(hour: number): string {
+    return hour <= 8 ? 'Ponto normal' : 'Fora do horário';
+  },
+};
+
+const employee2: IEmployee = {
+  names: ['Michelon', 'Marcelo', 'Rafael', 'Well'],
+  hitPoint(hour: number): string {
+    return hour <= 8 ? 'Ponto normal' : 'Fora do horário';
+  },
+};
+
+console.log(employee.names);
+console.log(employee.hitPoint(8));
+console.log(employee.hitPoint(9));
+
+console.log(employee2.names);

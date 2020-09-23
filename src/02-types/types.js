@@ -74,3 +74,35 @@ var calc;
 // eslint-disable-next-line prefer-const
 calc = multiply;
 console.log(calc(5, 6));
+// objects
+var user = {
+    name: 'Michelon',
+    age: 36,
+};
+console.log(user);
+// user = {};
+// user = {
+//   nome: 'maria',
+//   idade: 30.
+// }
+user = {
+    name: 'maria',
+    age: 31,
+};
+console.log(user);
+var employee = {
+    names: ['Lilian', 'Júlia', 'Rejane'],
+    hitPoint: function (hour) {
+        return hour <= 8 ? 'Ponto normal' : 'Fora do horário';
+    },
+};
+var employee2 = {
+    names: ['Michelon', 'Marcelo', 'Rafael', 'Well'],
+    hitPoint: function (hour) {
+        return hour <= 8 ? 'Ponto normal' : 'Fora do horário';
+    },
+};
+console.log(employee.names);
+console.log(employee.hitPoint(8));
+console.log(employee.hitPoint(9));
+console.log(employee2.names);
