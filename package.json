@@ -5,6 +5,9 @@
   "repository": "https://github.com/michelonsouza/cod3r-typescript.git",
   "author": "Michelon Souza <michelon.souza@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "live-server"
+  },
   "devDependencies": {
     "@types/node": "^14.11.2",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
@@ -14,6 +17,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-prettier": "^3.1.4",
+    "live-server": "^1.2.1",
     "prettier": "^2.1.2",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
