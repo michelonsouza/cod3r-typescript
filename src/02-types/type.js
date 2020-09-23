@@ -46,3 +46,8 @@ var myColor = Color.Green;
 console.log(myColor);
 console.log(Color.Blue);
 console.log(Color.Laranja, Color.Red);
+// any
+var car = 'BMW';
+console.log(car);
+car = { brand: 'BMW', year: 2019 };
+console.log(car);
