@@ -143,3 +143,33 @@ let nota: number | string = 10;
 console.log(`Minha nota é ${nota}`);
 nota = '100';
 console.log(`Minha nota é ${nota}`);
+
+// manual type checking
+const value = 30;
+
+if (typeof value === 'number') {
+  console.log('É um valor number');
+} else {
+  console.log(typeof value);
+}
+
+// type never
+function error(msg: string): never {
+  throw new Error(msg);
+}
+
+const product = {
+  name: 'Sabão',
+  price: 8,
+  productValidate() {
+    if (!this.name || !this.name.trim().length) {
+      error('Precisa ter um nome');
+    }
+
+    if (this.price <= 0) {
+      error('Preço inválido');
+    }
+  },
+};
+
+product.productValidate();

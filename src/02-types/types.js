@@ -111,3 +111,28 @@ var nota = 10;
 console.log("Minha nota \u00E9 " + nota);
 nota = '100';
 console.log("Minha nota \u00E9 " + nota);
+// manual type checking
+var value = 30;
+if (typeof value === 'number') {
+    console.log('É um valor number');
+}
+else {
+    console.log(typeof value);
+}
+// type never
+function error(msg) {
+    throw new Error(msg);
+}
+var product = {
+    name: 'Sabão',
+    price: 8,
+    productValidate: function () {
+        if (!this.name || !this.name.trim().length) {
+            error('Precisa ter um nome');
+        }
+        if (this.price <= 0) {
+            error('Preço inválido');
+        }
+    },
+};
+product.productValidate();
