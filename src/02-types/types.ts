@@ -203,3 +203,31 @@ nullable = 12;
 nullable = 'abc';
 
 console.log(nullable);
+
+// chalenge 2
+type BankAccount = {
+  balance: number;
+  deposit(depositValue: number): void;
+};
+
+type Client = {
+  name: string;
+  bankAccount: BankAccount;
+  contacts: string[];
+};
+
+const bankAccount: BankAccount = {
+  balance: 3456,
+  deposit(depositValue: number): void {
+    this.balance += depositValue;
+  },
+};
+
+const client: Client = {
+  name: 'Michelon Souza',
+  bankAccount,
+  contacts: ['987654321', '912345678'],
+};
+
+client.bankAccount.deposit(3000);
+console.log(client);

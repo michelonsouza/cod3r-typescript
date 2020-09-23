@@ -153,3 +153,16 @@ var nullable = null; // any
 nullable = 12;
 nullable = 'abc';
 console.log(nullable);
+var bankAccount = {
+    balance: 3456,
+    deposit: function (depositValue) {
+        this.balance += depositValue;
+    },
+};
+var client = {
+    name: 'Michelon Souza',
+    bankAccount: bankAccount,
+    contacts: ['987654321', '912345678'],
+};
+client.bankAccount.deposit(3000);
+console.log(client);
