@@ -5,3 +5,7 @@ const subscribers = 610234;
 console.log(`Chanel = ${chanel}`);
 
 // let name = 'pedro';
+
+function sum(a: number, b: number): number {
+  return a + b;
+}
