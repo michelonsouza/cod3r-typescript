@@ -166,3 +166,4 @@ var client = {
 };
 client.bankAccount.deposit(3000);
 console.log(client);
+//# sourceMappingURL=types.js.map
