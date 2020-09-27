@@ -18,6 +18,7 @@
   "rules": {
     "prettier/prettier": "error",
     "no-console": "off",
-    "no-restricted-globals": "off"
+    "no-restricted-globals": "off",
+    "no-param-reassign": "off"
   }
 }

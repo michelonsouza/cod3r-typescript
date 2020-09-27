@@ -56,3 +56,19 @@ falarCom('Michelon');
 
 // const arrowComThisEspecial = arrowComThis.bind({ nome: 'michelon' });
 // arrowComThisEspecial();
+
+// parâmetro padrão
+
+function contagemRegressiva(inicio = 5, fim = inicio - 5) {
+  console.log(inicio);
+
+  while (inicio > fim) {
+    inicio -= 1;
+    console.log(inicio);
+  }
+
+  console.log('fim');
+}
+
+contagemRegressiva();
+contagemRegressiva(3);
