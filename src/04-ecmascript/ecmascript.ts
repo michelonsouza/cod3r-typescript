@@ -136,3 +136,17 @@ const {
 } = item;
 
 console.log(itemName, price, w);
+
+// template string
+const userId = 'SuporteCod3r';
+const notificacoes = '9';
+
+// const welcome = 'Boas vindas ' + userId + ' Notificações' + notificacoes;
+// console.log(welcome);
+
+const welcome = `Boas vindas ${userId}, Notificações: ${
+  Number(notificacoes) > 9 ? '+9' : notificacoes
+}`;
+console.log(welcome);
+console.log(`${(1 + 1) * 30}`);
+console.log(`Motor: ${caracteristicas[0]}`);
