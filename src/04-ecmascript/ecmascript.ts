@@ -80,3 +80,17 @@ console.log(Math.max(...numbers));
 const turmaA: string[] = ['João', 'Maria', 'Fernanda'];
 const turmaB: string[] = ['Fernando', 'Miguel', 'Lorena', ...turmaA];
 console.log(turmaB);
+
+function returnArray(...args: number[]): number[] {
+  return args;
+}
+
+const numeros = returnArray(1, 2, 2, 3, 4, 5, 6, 7, 8, 8);
+console.log(numeros);
+console.log(returnArray(...numbers));
+
+const sumVariableArgs = (...args: number[]): number => {
+  return args.reduce((a, b) => a + b, 0);
+};
+
+console.log(sumVariableArgs(...numbers));
