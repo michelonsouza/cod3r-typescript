@@ -119,3 +119,20 @@ const [motor, ano] = caracteristicas;
 
 console.log(motor);
 console.log(ano);
+
+// destructuring object
+const item = {
+  name: 'SSD 480gb',
+  price: 200,
+  caracteristicas: {
+    w: 'Importado',
+  },
+};
+
+const {
+  name: itemName,
+  price,
+  caracteristicas: { w },
+} = item;
+
+console.log(itemName, price, w);
