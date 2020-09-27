@@ -30,14 +30,14 @@ saudacao();
 const falarCom = (pessoa) => console.log(`Olá ${pessoa}`);
 falarCom('Michelon');
 // this
-function normalComThis() {
-    console.log(this);
-}
-normalComThis();
-const normalComThisEspecial = normalComThis.bind(2);
-normalComThisEspecial();
-const arrowComThis = () => console.log(this);
-arrowComThis();
-const arrowComThisEspecial = arrowComThis.bind({ nome: 'michelon' });
-arrowComThisEspecial();
+// function normalComThis() {
+//   console.log(this);
+// }
+// normalComThis();
+// const normalComThisEspecial = normalComThis.bind(2);
+// normalComThisEspecial();
+// const arrowComThis = () => console.log(this);
+// arrowComThis();
+// const arrowComThisEspecial = arrowComThis.bind({ nome: 'michelon' });
+// arrowComThisEspecial();
 //# sourceMappingURL=ecmascript.js.map

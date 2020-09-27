@@ -42,17 +42,17 @@ falarCom('Michelon');
 
 // this
 
-function normalComThis() {
-  console.log(this);
-}
+// function normalComThis() {
+//   console.log(this);
+// }
 
-normalComThis();
+// normalComThis();
 
-const normalComThisEspecial = normalComThis.bind(2);
-normalComThisEspecial();
+// const normalComThisEspecial = normalComThis.bind(2);
+// normalComThisEspecial();
 
-const arrowComThis = () => console.log(this);
-arrowComThis();
+// const arrowComThis = () => console.log(this);
+// arrowComThis();
 
-const arrowComThisEspecial = arrowComThis.bind({ nome: 'michelon' });
-arrowComThisEspecial();
+// const arrowComThisEspecial = arrowComThis.bind({ nome: 'michelon' });
+// arrowComThisEspecial();
