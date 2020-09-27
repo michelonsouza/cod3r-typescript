@@ -1,33 +1,33 @@
 "use strict";
 // string
-var nome = 'João';
+const nome = 'João';
 console.log(nome);
 // nome = 28
 // numbers
-var age = 27;
+let age = 27;
 // age = 'Ana';
 age = 27.5;
 console.log(age);
 // boolean
-var hasHobbies = false;
+let hasHobbies = false;
 // hasHobbies = 1;
 hasHobbies = true;
 console.log(hasHobbies);
 // explicit types
-var myAge;
+let myAge;
 // eslint-disable-next-line prefer-const
 myAge = 27;
 console.log(typeof myAge);
 // myAge = 'idade 27';
 // array
-var hobbies = ['Cozinhar', 'Praticar esportes'];
+let hobbies = ['Cozinhar', 'Praticar esportes'];
 console.log(hobbies);
 console.log(typeof hobbies);
 hobbies = [100, 200, 300];
 // hobbies = 100;
 console.log(hobbies);
 // tupla
-var address = ['AV Principal', 99, ''];
+let address = ['AV Principal', 99, ''];
 console.log(address);
 address = ['Rua Importante', 1260, 'casa 1'];
 console.log(address);
@@ -42,12 +42,12 @@ var Color;
     Color[Color["Yellow"] = 12] = "Yellow";
     Color[Color["Red"] = 100] = "Red";
 })(Color || (Color = {}));
-var myColor = Color.Green;
+const myColor = Color.Green;
 console.log(myColor);
 console.log(Color.Blue);
 console.log(Color.Laranja, Color.Red);
 // any
-var car = 'BMW';
+let car = 'BMW';
 console.log(car);
 car = { brand: 'BMW', year: 2019 };
 console.log(car);
@@ -68,14 +68,14 @@ function multiply(numA, numB) {
 // console.log(multiply(2, 'ana'));
 console.log(multiply(4, 9));
 // function type
-var calc;
+let calc;
 // calc = sayHello;
 // calc();
 // eslint-disable-next-line prefer-const
 calc = multiply;
 console.log(calc(5, 6));
 // objects
-var user = {
+let user = {
     name: 'Michelon',
     age: 36,
 };
@@ -90,15 +90,15 @@ user = {
     age: 31,
 };
 console.log(user);
-var employee = {
+const employee = {
     names: ['Lilian', 'Júlia', 'Rejane'],
-    hitPoint: function (hour) {
+    hitPoint(hour) {
         return hour <= 8 ? 'Ponto normal' : 'Fora do horário';
     },
 };
-var employee2 = {
+const employee2 = {
     names: ['Michelon', 'Marcelo', 'Rafael', 'Well'],
-    hitPoint: function (hour) {
+    hitPoint(hour) {
         return hour <= 8 ? 'Ponto normal' : 'Fora do horário';
     },
 };
@@ -107,12 +107,12 @@ console.log(employee.hitPoint(8));
 console.log(employee.hitPoint(9));
 console.log(employee2.names);
 // union types
-var nota = 10;
-console.log("Minha nota \u00E9 " + nota);
+let nota = 10;
+console.log(`Minha nota é ${nota}`);
 nota = '100';
-console.log("Minha nota \u00E9 " + nota);
+console.log(`Minha nota é ${nota}`);
 // manual type checking
-var value = 30;
+const value = 30;
 if (typeof value === 'number') {
     console.log('É um valor number');
 }
@@ -123,10 +123,10 @@ else {
 function error(msg) {
     throw new Error(msg);
 }
-var product = {
+const product = {
     name: 'Sabão',
     price: 8,
-    productValidate: function () {
+    productValidate() {
         if (!this.name || !this.name.trim().length) {
             error('Precisa ter um nome');
         }
@@ -137,31 +137,31 @@ var product = {
 };
 product.productValidate();
 // strictNullChecks
-var height = 12;
+const height = 12;
 // height = null;
-var optionalHeight = 12;
+let optionalHeight = 12;
 optionalHeight = null;
 console.log(height, optionalHeight);
-var contact1 = {
+const contact1 = {
     name: 'Filano',
     tel1: '987654321',
 };
 console.log(contact1.name);
 console.log(contact1.tel1);
 console.log(contact1.tel2);
-var nullable = null; // any
+let nullable = null; // any
 nullable = 12;
 nullable = 'abc';
 console.log(nullable);
-var bankAccount = {
+const bankAccount = {
     balance: 3456,
-    deposit: function (depositValue) {
+    deposit(depositValue) {
         this.balance += depositValue;
     },
 };
-var client = {
+const client = {
     name: 'Michelon Souza',
-    bankAccount: bankAccount,
+    bankAccount,
     contacts: ['987654321', '912345678'],
 };
 client.bankAccount.deposit(3000);
