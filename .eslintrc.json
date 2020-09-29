@@ -19,6 +19,7 @@
     "prettier/prettier": "error",
     "no-console": "off",
     "no-restricted-globals": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "no-useless-constructor": "off"
   }
 }

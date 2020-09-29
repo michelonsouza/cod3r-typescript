@@ -1,3 +1,4 @@
+// eslint-disable-next-line max-classes-per-file
 class Data {
   public day: number;
 
@@ -20,3 +21,20 @@ console.log(birth);
 const marriage = new Data(); // posso omitir os parentses
 marriage.year = 2017;
 console.log(marriage);
+
+class ExpertData {
+  constructor(
+    public day: number = 1,
+    public month: number = 1,
+    public year: number = 1970,
+  ) {}
+}
+
+const expertBirth = new ExpertData(23, 7, 1984);
+expertBirth.day = 4;
+console.log(expertBirth.day);
+console.log(expertBirth);
+
+const expertMarriage = new ExpertData(); // posso omitir os parentses
+expertMarriage.year = 2017;
+console.log(expertMarriage);
