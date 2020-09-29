@@ -150,3 +150,35 @@ const welcome = `Boas vindas ${userId}, Notificações: ${
 console.log(welcome);
 console.log(`${(1 + 1) * 30}`);
 console.log(`Motor: ${caracteristicas[0]}`);
+
+// // Callback
+
+// function esperar3s(callback: (text: string) => void) {
+//   setTimeout(() => {
+//     callback('3s depois');
+//   }, 3000);
+// }
+
+// esperar3s((text: string): void => {
+//   console.log(text);
+// });
+
+// // Promise
+
+// function esperar3sPromise() {
+//   return new Promise(resolve => {
+//     setTimeout(() => {
+//       resolve('3s depois promise...');
+//     }, 3000);
+//   });
+// }
+
+// esperar3sPromise().then(console.log);
+
+fetch('https://swapi.dev/api/people/1')
+  .then(res => res.json())
+  .then(personagem => personagem.films)
+  .then(films => fetch(films[0]))
+  .then(res => res.json())
+  .then(console.log)
+  .catch(console.log);
