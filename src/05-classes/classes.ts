@@ -70,3 +70,59 @@ product1.discount = 0.06;
 
 console.log(product1.resume());
 console.log(product2.resume());
+
+// modifiers
+class Car {
+  private velocity = 0;
+
+  constructor(
+    public brand: string,
+    public model: string,
+    private maxVelocity: number = 200,
+  ) {}
+
+  private changeVelocity(delta: number): number {
+    const newVelocity = this.velocity + delta;
+    const validVelocity = newVelocity >= 0 && newVelocity <= this.maxVelocity;
+
+    if (validVelocity) {
+      this.velocity = newVelocity;
+    } else {
+      this.velocity = delta > 0 ? this.maxVelocity : 0;
+    }
+
+    return this.velocity;
+  }
+
+  public acelerate(): number {
+    return this.changeVelocity(5);
+  }
+
+  public stop(): number {
+    return this.changeVelocity(-5);
+  }
+}
+
+const car1 = new Car('Ford', 'Ka', 185);
+
+Array(50)
+  .fill(0)
+  .forEach(() => car1.acelerate());
+
+console.log(car1.acelerate());
+
+Array(40)
+  .fill(0)
+  .forEach(() => car1.stop());
+
+console.log(car1.stop());
+
+// simular "erros"
+// car1.velocity = 300;
+// console.log(`atual -> ${car1.velocity}`);
+
+// car1.maxVelocity = 500;
+// console.log(`máxima -> ${car1.maxVelocity}`);
+
+// car1.changeVelocity(150);
+// console.log(`atual -> ${car1.velocity}`);
