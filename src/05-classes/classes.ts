@@ -51,12 +51,22 @@ class Product {
     public price: number,
     public discount: number = 0,
   ) {}
+
+  public resume(): string {
+    return `${this.name} custa R$${this.priceWithDiscount()} (${
+      this.discount * 100
+    }% off)`;
+  }
+
+  public priceWithDiscount(): number {
+    return this.price * (1 - this.discount);
+  }
 }
 
 const product1 = new Product('Caneta Azul', 2.76);
 const product2 = new Product('Computador', 4000, 0.1);
 
-product1.discount = 0.6;
+product1.discount = 0.06;
 
-console.log(product1);
-console.log(product2);
+console.log(product1.resume());
+console.log(product2.resume());
