@@ -38,3 +38,25 @@ console.log(expertBirth);
 const expertMarriage = new ExpertData(); // posso omitir os parentses
 expertMarriage.year = 2017;
 console.log(expertMarriage);
+
+// Desafio Produto
+// Atributos: name, price e discount
+// Criar construtor
+// OBS 1: Desconto é opcional (valor padrão 0)
+// OBS 2: Criar dois produtos: passando dois e três parâmetros
+
+class Product {
+  constructor(
+    public name: string,
+    public price: number,
+    public discount: number = 0,
+  ) {}
+}
+
+const product1 = new Product('Caneta Azul', 2.76);
+const product2 = new Product('Computador', 4000, 0.1);
+
+product1.discount = 0.6;
+
+console.log(product1);
+console.log(product2);
