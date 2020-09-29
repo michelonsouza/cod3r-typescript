@@ -1,7 +1,5 @@
 // Exercicio 1
-const dobro = (valor: number): number => {
-  return valor * 2;
-};
+const dobro = (valor: number): number => valor * 2;
 console.log(dobro(10));
 
 // Exercicio 2
@@ -18,7 +16,8 @@ const nums = [-3, 33, 38, 5];
 console.log(Math.min(...nums));
 
 // Exercicio 4
-const array = [55, 20, ...nums];
+const array = [55, 20];
+array.push(...nums);
 
 console.log(array);
 
