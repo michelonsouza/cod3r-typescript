@@ -81,7 +81,7 @@ class Car {
     private maxVelocity: number = 200,
   ) {}
 
-  private changeVelocity(delta: number): number {
+  protected changeVelocity(delta: number): number {
     const newVelocity = this.velocity + delta;
     const validVelocity = newVelocity >= 0 && newVelocity <= this.maxVelocity;
 
@@ -126,3 +126,18 @@ console.log(car1.stop());
 
 // car1.changeVelocity(150);
 // console.log(`atual -> ${car1.velocity}`);
+
+class Ferari extends Car {
+  public acelerate(): number {
+    return this.changeVelocity(20);
+  }
+
+  public stop(): number {
+    return this.changeVelocity(-15);
+  }
+}
+
+const f40 = new Ferari('Ferrari', 'F40', 324);
+console.log(`${f40.brand} ${f40.model}`);
+console.log(f40.acelerate());
+console.log(f40.stop());
