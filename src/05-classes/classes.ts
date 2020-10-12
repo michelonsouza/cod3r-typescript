@@ -148,3 +148,22 @@ console.log(f40.acelerate());
 console.log(f40.acelerate());
 console.log(f40.stop());
 console.log(f40.stop());
+
+// getters and setters
+class Person {
+  private _age = 0;
+
+  get age() {
+    return this._age;
+  }
+
+  set age(newAge: number) {
+    if (newAge >= 0 && newAge <= 120) {
+      this._age = newAge;
+    }
+  }
+}
+
+const person1 = new Person();
+person1.age = 10;
+console.log(person1.age);
