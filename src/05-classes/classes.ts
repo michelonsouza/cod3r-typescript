@@ -128,6 +128,10 @@ console.log(car1.stop());
 // console.log(`atual -> ${car1.velocity}`);
 
 class Ferari extends Car {
+  constructor(model: string, maxVelocity: number) {
+    super('Ferrari', model, maxVelocity);
+  }
+
   public acelerate(): number {
     return this.changeVelocity(20);
   }
@@ -137,7 +141,10 @@ class Ferari extends Car {
   }
 }
 
-const f40 = new Ferari('Ferrari', 'F40', 324);
+const f40 = new Ferari('F40', 324);
 console.log(`${f40.brand} ${f40.model}`);
 console.log(f40.acelerate());
+console.log(f40.acelerate());
+console.log(f40.acelerate());
+console.log(f40.stop());
 console.log(f40.stop());
