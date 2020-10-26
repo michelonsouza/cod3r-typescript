@@ -173,7 +173,7 @@ class Mathematic {
   static PI = 3.1415;
 
   static circleArea(radius: number): number {
-    return this.PI * radius ** 2;
+    return Mathematic.PI * radius ** 2;
   }
 }
 
@@ -213,3 +213,22 @@ console.log(c1.getResult());
 c1 = new Multiply();
 c1.execute(1, 2, 3, 4, 5);
 console.log(c1.getResult());
+
+// Singloton pattern
+class Unic {
+  private static instance = new Unic();
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  private constructor() {}
+
+  static getInstance(): Unic {
+    return Unic.instance;
+  }
+
+  now(): Date {
+    return new Date();
+  }
+}
+
+// const error = new Unic();
+console.log(Unic.getInstance().now());
