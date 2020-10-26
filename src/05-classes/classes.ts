@@ -182,3 +182,34 @@ class Mathematic {
 // console.log(m1.circleArea(4));
 
 console.log(Mathematic.circleArea(4));
+
+// Abstract class
+abstract class Calc {
+  protected result = 0;
+
+  abstract execute(...numbers: number[]): void;
+
+  getResult(): number {
+    return this.result;
+  }
+}
+
+class Sum extends Calc {
+  execute(...numbers: number[]): void {
+    this.result = numbers.reduce((accumulator, value) => accumulator + value);
+  }
+}
+
+class Multiply extends Calc {
+  execute(...numbers: number[]): void {
+    this.result = numbers.reduce((accumulator, value) => accumulator * value);
+  }
+}
+
+let c1 = new Sum();
+c1.execute(1, 2, 3, 4, 5);
+console.log(c1.getResult());
+
+c1 = new Multiply();
+c1.execute(1, 2, 3, 4, 5);
+console.log(c1.getResult());
