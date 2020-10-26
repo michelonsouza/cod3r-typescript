@@ -167,3 +167,18 @@ class Person {
 const person1 = new Person();
 person1.age = 10;
 console.log(person1.age);
+
+// Static atributes
+class Mathematic {
+  static PI = 3.1415;
+
+  static circleArea(radius: number): number {
+    return this.PI * radius ** 2;
+  }
+}
+
+// const m1 = new Mathematic();
+// m1.PI = 4.2;
+// console.log(m1.circleArea(4));
+
+console.log(Mathematic.circleArea(4));
