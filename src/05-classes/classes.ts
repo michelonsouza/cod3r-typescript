@@ -232,3 +232,18 @@ class Unic {
 
 // const error = new Unic();
 console.log(Unic.getInstance().now());
+
+// Read only
+class Airplane {
+  public readonly model: string;
+
+  constructor(model: string, public readonly prefix: string) {
+    this.model = model;
+  }
+}
+
+const turboHelice = new Airplane('TU-114', 'PT-ABC');
+// turboHelice.model = 'DC-8';
+// turboHelice.prefix = 'PT-DEF';
+
+console.log(turboHelice);
