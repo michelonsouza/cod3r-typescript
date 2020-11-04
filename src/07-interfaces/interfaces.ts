@@ -1,5 +1,8 @@
 interface Human {
   name: string;
+  age?: number;
+  [key: string]: any;
+  greeting(surname: string): void;
 }
 
 function sayHello(person: Human): void {
@@ -10,11 +13,16 @@ function changeName(person: Human): void {
   person.name = 'Joana';
 }
 
-const person = {
+const person: Human = {
   name: 'Michelon',
   age: 36,
+  greeting(surname: string): void {
+    console.log(`Olá, meu nome é ${this.name} ${surname}`);
+  },
 };
 
 sayHello(person);
 changeName(person);
 sayHello(person);
+
+person.greeting('Skywalker');
