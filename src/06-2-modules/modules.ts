@@ -1,5 +1,9 @@
 import { reactArea } from './rect';
-import { circleArea } from './circle';
+// import reactArea from './rect';
+// import { circleArea } from './circle';
+import { circleArea as circ } from './circle';
+
+console.log('Modulo carregado...');
 
 console.log(reactArea(7, 8));
-console.log(circleArea(2));
+console.log(circ(2));
