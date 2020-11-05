@@ -44,3 +44,8 @@ printer<Student>([
   { name: 'michelon', age: 36 },
   { name: 'lilian', age: 32 },
 ]);
+
+// Generics Type
+const callEcho: <T>(data: T) => T = betterEcho;
+
+console.log(callEcho<string>('alguma coisa'));
