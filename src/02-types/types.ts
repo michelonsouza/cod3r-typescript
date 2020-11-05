@@ -70,11 +70,11 @@ function returnMyName(): string {
 
 console.log(returnMyName());
 
-function sayHello(): void {
+function sayHello2(): void {
   console.log('Hello');
 }
 
-sayHello();
+sayHello2();
 
 function multiply(numA: number, numB: number): number {
   return numA * numB;
@@ -86,7 +86,7 @@ console.log(multiply(4, 9));
 // function type
 
 let calc: (a: number, b: number) => number;
-// calc = sayHello;
+// calc = sayHello2;
 // calc();
 
 // eslint-disable-next-line prefer-const
